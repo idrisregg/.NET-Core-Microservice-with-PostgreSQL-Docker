@@ -39,8 +39,8 @@ bld/
 *.nuget.targets
 
 # Local user-specific settings
-appsettings.local.json
-appsettings.Development.local.json
+appsettings.json
+appsettings.Development.json
 
 # OS files
 .DS_Store
