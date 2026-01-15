@@ -1,7 +1,7 @@
 PS : The URL Doesnt Contain CORS Use Endpoints as you wish ...:)
 
 
-A secure ASP.NET Core Web API for user authentication and management with JWT tokens and PostgreSQL database.
+A secure ASP.NET Core Web API for user authentication and management with JWT tokens and PostgreSQL database and Docker image.
 
 
 ## Tech Stack
@@ -9,6 +9,7 @@ A secure ASP.NET Core Web API for user authentication and management with JWT to
 - ASP.NET Core
 - Entity Framework Core
 - PostgreSQL
+- Docker
 - JWT Authentication
 - FluentValidation
 - Supabase
