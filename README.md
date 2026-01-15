@@ -1,4 +1,4 @@
-PS : The URL Doesnt Contain CORS Use Endpoints as you wish ...:)
+PS : The App Doesnt Contain CORS Use Endpoints as you wish ...:)
 
 if Deploying to Render Use Docker cause... render doesnt have Native Support for .NET Runtime Environement
 
