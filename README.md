@@ -1,4 +1,4 @@
-
+PS : The URL Doesnt Contain CORS Use Endpoints as you wish ...:)
 A secure ASP.NET Core Web API for user authentication and management with JWT tokens and PostgreSQL database.
 
 
