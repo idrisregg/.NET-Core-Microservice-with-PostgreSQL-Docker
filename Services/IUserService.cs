@@ -15,5 +15,7 @@ public interface IUserService
     Task<bool> VerifyPasswordAsync(User user, string password);
     Task UpdateUserAsync(User user);
     Task<bool> DeleteUserAsync(int id);
+
+    Task<User> GetUserByUsernameAsync(string username);
 }
 

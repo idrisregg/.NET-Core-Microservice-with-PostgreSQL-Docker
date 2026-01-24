@@ -6,16 +6,10 @@ using Wajeb.API.Data;
 
 namespace Wajeb.API.Services;
 
-public class UserService : IUserService
+public class UserService(WajebDbContext context, IPasswordHasher<User> passwordHasher) : IUserService
 {
-    private readonly WajebDbContext _context;
-    private readonly IPasswordHasher<User> _passwordHasher;
-
-    public UserService(WajebDbContext context, IPasswordHasher<User> passwordHasher)
-    {
-        _context = context;
-        _passwordHasher = passwordHasher;
-    }
+    private readonly WajebDbContext _context = context;
+    private readonly IPasswordHasher<User> _passwordHasher = passwordHasher;
 
     public async Task<bool> UserExistsByUsernameAsync(string username)
     {
@@ -76,6 +70,10 @@ public class UserService : IUserService
         return Task.FromResult(result == PasswordVerificationResult.Success);
     }
 
+    public async Task<User?> GetUserByUsernameAsync(string username)
+    {
+        return await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
+    }
     public async Task UpdateUserAsync(User user)
     {
         _context.Users.Update(user);
