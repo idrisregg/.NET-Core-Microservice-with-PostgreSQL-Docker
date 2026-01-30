@@ -25,11 +25,11 @@ public class UsersController(
             if (!int.TryParse(idClaim, out var id))
                 return Unauthorized();
 
-            var user = await _userService.GetUserByIdAsync(id);
+            var user = await _userService.AsNoTracking().GetUserByIdAsync(id);
             if (user is null)
                 return NotFound();
 
-            var userDetails = await _userService.GetUserDetailsAsync(user);
+            var userDetails = await _userService.AsNoTracking().GetUserDetailsAsync(user);
             return Ok(userDetails);
         }
         catch (Exception ex)
