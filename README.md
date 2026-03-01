@@ -1,6 +1,3 @@
-PS : The App Doesnt Contain CORS 
-
-if Deploying to Render Use Docker cause... render doesnt have Native Support for .NET Runtime Environement
 
 A secure ASP.NET Core Web API for user authentication and management with JWT tokens and PostgreSQL database and Docker image.
 
